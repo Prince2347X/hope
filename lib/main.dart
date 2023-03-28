@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hope/users/hospital_details.dart';
 
 import 'package:hope/users/login.dart';
 void main() {
@@ -16,8 +17,12 @@ class HopeApp extends StatefulWidget {
 class _HopeAppState extends State<HopeApp> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: UserLoginPage()
+    return MaterialApp(
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xFFE0F0E4)
+      ),
+      debugShowCheckedModeBanner: false,
+      home: const HospitalDetails()
     );
   }
 }
