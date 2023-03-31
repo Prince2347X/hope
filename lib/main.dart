@@ -17,6 +17,7 @@ class _HopeAppState extends State<HopeApp> {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: UserLoginPage()
     );
   }
