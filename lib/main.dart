@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hope/user_homepage.dart';
-import 'package:hope/users/hospital_details.dart';
+import 'package:hope/users/homepage.dart';
 
 import 'package:hope/users/login.dart';
 void main() {
