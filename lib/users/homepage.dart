@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:hope/components/search_bar.dart';
+
 class UserHome extends StatelessWidget {
   const UserHome({Key? key}) : super(key: key);
 
@@ -30,8 +32,10 @@ class UserHome extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          //TODO: Add search bar
           children: [
+            SearchBar(
+              callback: (value) {},
+            ),
             Row(children: const <Widget>[
               Expanded(
                   child: Divider(
