@@ -1,0 +1,43 @@
+{
+    "[dart]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true
+        },
+        "editor.defaultFormatter": "Dart-Code.dart-code",
+        "editor.formatOnSave": true,
+        "editor.indentSize": 2,
+        "editor.rulers": [
+            120
+        ],
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.tabCompletion": "onlySnippets",
+        "editor.tabSize": 2,
+        "editor.wordBasedSuggestions": false
+    },
+    "dart.lineLength": 120,
+    "dart.previewFlutterUiGuides": true,
+    // Import sort
+    "dartimportsorter.sortOnSave": true,
+    "dart.flutterHotReloadOnSave": "all",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.codeActionsOnSave": {
+        "quickfix.insertSemicolon": true,
+        "quickfix.removeUnusedImport": true,
+    },
+    "editor.detectIndentation": true,
+    "editor.indentSize": 4,
+    "editor.minimap.enabled": false,
+    "editor.stickyScroll.enabled": true,
+    "editor.tabSize": 2,
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": false,
+    "explorer.fileNesting.patterns": {
+        "*.dart": "$(capture).g.dart, $(capture).freezed.dart"
+    },
+    "files.eol": "\n",
+    "search.exclude": {
+        "**/.dart_tool": true,
+        "**/.git/": true,
+        "**/.idea": true
+    }
+}
