@@ -38,7 +38,7 @@ class _HopeAppState extends State<HopeApp> {
         primarySwatch: myCustomColor,
       ),
       debugShowCheckedModeBanner: false,
-      home: const UserHome(),
+      home: const UserHomePage(),
     );
   }
 }

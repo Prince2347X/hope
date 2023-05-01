@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:hope/components/search_bar.dart';
 
-class UserHome extends StatelessWidget {
-  const UserHome({Key? key}) : super(key: key);
+class UserHomePage extends StatelessWidget {
+  const UserHomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
