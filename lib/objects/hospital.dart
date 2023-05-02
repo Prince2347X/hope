@@ -5,7 +5,7 @@ class HospitalObject {
   final String contact;
   final List<DoctorObject> doctors;
   final List<String> features;
-  final String hostpitalId;
+  final String hospitalId;
   final String imageUrl;
   final String name;
   final List<String> specialities;
@@ -16,7 +16,7 @@ class HospitalObject {
     required this.contact,
     required this.doctors,
     required this.features,
-    required this.hostpitalId,
+    required this.hospitalId,
     required this.imageUrl,
     required this.name,
     required this.specialities,
