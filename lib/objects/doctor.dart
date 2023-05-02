@@ -1,7 +1,7 @@
 class DoctorObject {
   final String doctorId;
   final String imageUrl;
-  final String isAvailable;
+  final bool isAvailable;
   final String license;
   final String name;
   final String qualification;
