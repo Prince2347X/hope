@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'package:hope/components/divider.dart';
 import 'package:hope/constants.dart';
 
 class HospitalDetailsPage extends StatefulWidget {
@@ -83,13 +85,7 @@ class _HospitalDetailsPageState extends State<HospitalDetailsPage> {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8),
-            child: Divider(
-              thickness: 0.5,
-              color: primaryColor,
-            ),
-          ),
+          const CustomDivider(),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 14),
             child: Row(
@@ -148,13 +144,7 @@ class _HospitalDetailsPageState extends State<HospitalDetailsPage> {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 4),
-            child: Divider(
-              thickness: 0.5,
-              color: primaryColor,
-            ),
-          ),
+          const CustomDivider(),
           const Center(
             child: Padding(
               padding: EdgeInsets.only(bottom: 8.0),
@@ -183,13 +173,7 @@ class _HospitalDetailsPageState extends State<HospitalDetailsPage> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 4),
-            child: Divider(
-              thickness: 0.5,
-              color: primaryColor,
-            ),
-          ),
+          const CustomDivider(),
           const Center(
             child: Padding(
               padding: EdgeInsets.only(bottom: 8.0),
@@ -229,8 +213,7 @@ class _HospitalDetailsPageState extends State<HospitalDetailsPage> {
     bool isAvailable,
   ) {
     return Padding(
-      padding:
-          const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0, top: 4),
+      padding: const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0, top: 4),
       child: ListTile(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
