@@ -22,5 +22,33 @@ class HospitalObject {
     required this.specialities,
     required this.website,
   });
+
+  factory HospitalObject.fromJson(Map<String, dynamic> json) {
+    return HospitalObject(
+      address: json['address'],
+      contact: json['contact'],
+      doctors: json['doctors'],
+      features: json['features'],
+      hospitalId: json['hospitalId'],
+      imageUrl: json['imageUrl'],
+      name: json['name'],
+      specialities: json['specialities'],
+      website: json['website'],
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'address': address,
+      'contact': contact,
+      'doctors': doctors,
+      'features': features,
+      'hospitalId': hospitalId,
+      'imageUrl': imageUrl,
+      'name': name,
+      'specialities': specialities,
+      'website': website,
+    };
+  }
 }
-//TODO: Add fromJson and toJson methods
+

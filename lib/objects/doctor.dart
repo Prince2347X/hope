@@ -16,5 +16,28 @@ class DoctorObject {
     required this.qualification,
     required this.specializations,
   });
+
+  factory DoctorObject.fromJson(Map<String, dynamic> json) {
+    return DoctorObject(
+      doctorId: json['doctorId'],
+      imageUrl: json['imageUrl'],
+      isAvailable: json['isAvailable'],
+      license: json['license'],
+      name: json['name'],
+      qualification: json['qualification'],
+      specializations: json['specializations'],
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'doctorId': doctorId,
+      'imageUrl': imageUrl,
+      'isAvailable': isAvailable,
+      'license': license,
+      'name': name,
+      'qualification': qualification,
+      'specializations': specializations,
+    };
+  }
 }
-//TODO: Add fromJson and toJson methods
