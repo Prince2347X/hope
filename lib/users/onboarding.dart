@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hope/users/homepage.dart';
+import 'package:hope/users/login.dart';
 
 class UserOnboardingPage extends StatelessWidget {
   const UserOnboardingPage({Key? key}) : super(key: key);
@@ -49,7 +49,7 @@ class UserOnboardingPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return const UserHomePage();
+                            return const UserLoginPage();
                           },
                         ),
                       );
