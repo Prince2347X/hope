@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hope/users/login.dart';
+import 'package:hope/users/onboarding.dart';
 
 void main() {
   runApp(const HopeApp());
@@ -37,7 +37,7 @@ class _HopeAppState extends State<HopeApp> {
         primarySwatch: myCustomColor,
       ),
       debugShowCheckedModeBanner: false,
-      home: const UserLoginPage(),
+      home: const UserOnboardingPage(),
     );
   }
 }
