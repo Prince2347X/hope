@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+
 import 'package:hope/components/search_bar.dart';
 
-class UserHomePage extends StatelessWidget {
-  const UserHomePage({Key? key}) : super(key: key);
+class UserHomePage extends ConsumerWidget {
+  const UserHomePage({super.key});
 
   static const name = 'Home';
   static const path = '/home';
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -94,8 +96,9 @@ class UserHomePage extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget hospitalCard(BuildContext context, String image, String name, String address, String dist) {
+Widget hospitalCard(BuildContext context, String image, String name, String address, String dist) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Card(
@@ -184,4 +187,3 @@ class UserHomePage extends StatelessWidget {
       ),
     );
   }
-}
