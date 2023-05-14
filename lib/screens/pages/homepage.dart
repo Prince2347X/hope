@@ -5,6 +5,9 @@ import 'package:hope/components/search_bar.dart';
 class UserHomePage extends StatelessWidget {
   const UserHomePage({Key? key}) : super(key: key);
 
+  static const name = 'Home';
+  static const path = '/home';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

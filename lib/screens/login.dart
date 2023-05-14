@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hope/users/homepage.dart';
+import 'package:hope/screens/pages/homepage.dart';
 
-class UserOnboardingPage extends StatelessWidget {
-  const UserOnboardingPage({Key? key}) : super(key: key);
+class UserLoginPage extends StatelessWidget {
+  const UserLoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

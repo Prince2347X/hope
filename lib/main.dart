@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hope/users/onboarding.dart';
+import 'package:hope/screens/onboarding.dart';
 
 void main() {
   runApp(const HopeApp());
