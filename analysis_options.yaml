@@ -4,3 +4,4 @@ linter:
   rules:
     require_trailing_commas: true
     prefer_single_quotes: true
+    depend_on_referenced_packages: false
