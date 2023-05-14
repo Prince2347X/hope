@@ -6,6 +6,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:hope/components/bottom_navigation.dart';
+import 'package:hope/screens/login.dart';
+import 'package:hope/screens/onboarding.dart';
 import 'package:hope/screens/pages/clinic_page.dart';
 import 'package:hope/screens/pages/homepage.dart';
 import 'package:hope/screens/pages/others_page.dart';
@@ -23,6 +25,22 @@ class RouterNotifier extends AutoDisposeAsyncNotifier<void> implements Listenabl
             return ScaffoldWithBottomNavBar(child: child);
           },
           routes: [
+            GoRoute(
+              name: UserOnboardingPage.name,
+              path: UserOnboardingPage.path,
+              pageBuilder: (context, state) => NoTransitionPage(
+                key: state.pageKey,
+                child: const UserOnboardingPage(),
+              ),
+            ),
+            GoRoute(
+              name: UserLoginPage.name,
+              path: UserLoginPage.path,
+              pageBuilder: (context, state) => NoTransitionPage(
+                key: state.pageKey,
+                child: const UserLoginPage(),
+              ),
+            ),
             GoRoute(
               name: UserHomePage.name,
               path: UserHomePage.path,
