@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
+
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+
 import 'package:hope/screens/pages/homepage.dart';
 
-class UserLoginPage extends StatelessWidget {
-  const UserLoginPage({Key? key}) : super(key: key);
+class UserLoginPage extends ConsumerWidget {
+  const UserLoginPage({super.key});
+
+  static const name = 'Login';
+  static const path = '/login';
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return SafeArea(
       child: Scaffold(
         body: Stack(
