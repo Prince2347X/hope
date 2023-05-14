@@ -15,7 +15,7 @@ final routerProvider = Provider.autoDispose<GoRouter>((ref) {
     navigatorKey: _key,
     refreshListenable: notifier,
     debugLogDiagnostics: true,
-    initialLocation: '/home',
+    initialLocation: '/login',
     routes: notifier.routes,
   );
 });
