@@ -28,11 +28,11 @@ class _HospitalDetailsPageState extends State<HospitalDetailsPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Expanded(
+                const Expanded(
                   flex: 8,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
                         'RamKrishna Care Hospital',
                         style: TextStyle(

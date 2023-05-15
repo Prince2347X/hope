@@ -32,16 +32,16 @@ class HospitalsPage extends ConsumerWidget {
             ),
           )
         ],
-        title: Column(
+        title: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-              children: const [
+              children: [
                 Text('Boys Hostel'),
                 Icon(Icons.arrow_drop_down),
               ],
             ),
-            const Text('Mujgahan, Raipur')
+            Text('Mujgahan, Raipur')
           ],
         ),
       ),
@@ -51,8 +51,8 @@ class HospitalsPage extends ConsumerWidget {
             CustomSearchBar(
               callback: (value) {},
             ),
-            Row(
-              children: const <Widget>[
+            const Row(
+              children: <Widget>[
                 Expanded(
                   child: Divider(
                     endIndent: 12,
