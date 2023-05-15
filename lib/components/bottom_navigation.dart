@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:go_router/go_router.dart';
 
-import 'package:hope/screens/pages/clinic_page.dart';
+import 'package:hope/screens/pages/clinics_page.dart';
 import 'package:hope/screens/pages/hospital_page.dart';
 import 'package:hope/screens/pages/others_page.dart';
 import 'package:hope/screens/pages/pharmacy_page.dart';
@@ -34,7 +34,7 @@ class _ScaffoldWithBottomNavBarState extends State<ScaffoldWithBottomNavBar> {
         context.go(HospitalsPage.path);
         break;
       case 1:
-        context.go(ClinicPage.path);
+        context.go(ClinicsPage.path);
         break;
       case 2:
         context.go(PharmacyPage.path);

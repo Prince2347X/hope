@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class ClinicPage extends ConsumerWidget {
-  const ClinicPage({super.key});
+class ClinicsPage extends ConsumerWidget {
+  const ClinicsPage({super.key});
 
   static const name = 'Clinics';
   static const path = '/clinics';

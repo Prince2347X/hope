@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 import 'package:go_router/go_router.dart';
-import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:hope/components/bottom_navigation.dart';
 import 'package:hope/screens/login.dart';
 import 'package:hope/screens/onboarding.dart';
-import 'package:hope/screens/pages/clinic_page.dart';
+import 'package:hope/screens/pages/clinics_page.dart';
 import 'package:hope/screens/pages/hospital_page.dart';
 import 'package:hope/screens/pages/others_page.dart';
 import 'package:hope/screens/pages/pharmacy_page.dart';
@@ -49,11 +49,11 @@ class RouterNotifier extends AutoDisposeAsyncNotifier<void> implements Listenabl
               ),
             ),
             GoRoute(
-              name: ClinicPage.name,
-              path: ClinicPage.path,
+              name: ClinicsPage.name,
+              path: ClinicsPage.path,
               pageBuilder: (context, state) => NoTransitionPage(
                 key: state.pageKey,
-                child: const ClinicPage(),
+                child: const ClinicsPage(),
               ),
             ),
             GoRoute(
