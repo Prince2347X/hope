@@ -4,4 +4,8 @@ linter:
   rules:
     require_trailing_commas: true
     prefer_single_quotes: true
+
+    # Conflicts with import sorter
+    directives_ordering: false
+    public_member_api_docs: false
     depend_on_referenced_packages: false
