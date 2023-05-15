@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:hope/users/homepage.dart';
 
-class UserOnboardingPage extends StatelessWidget {
-  const UserOnboardingPage({Key? key}) : super(key: key);
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+import 'package:hope/screens/pages/hospitals_page.dart';
+
+class UserLoginPage extends ConsumerWidget {
+  const UserLoginPage({super.key});
+
+  static const name = 'Login';
+  static const path = '/login';
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return SafeArea(
       child: Scaffold(
         body: Stack(
@@ -49,7 +55,7 @@ class UserOnboardingPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return const UserHomePage();
+                            return const HospitalsPage();
                           },
                         ),
                       );
