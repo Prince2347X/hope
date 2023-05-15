@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'package:hope/screens/pages/hospital_page.dart';
+import 'package:hope/screens/pages/hospitals_page.dart';
 
 class UserOnboardingPage extends ConsumerWidget {
   const UserOnboardingPage({super.key});

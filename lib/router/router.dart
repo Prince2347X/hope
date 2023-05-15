@@ -7,7 +7,7 @@ import 'package:hope/components/bottom_navigation.dart';
 import 'package:hope/screens/login.dart';
 import 'package:hope/screens/onboarding.dart';
 import 'package:hope/screens/pages/clinics_page.dart';
-import 'package:hope/screens/pages/hospital_page.dart';
+import 'package:hope/screens/pages/hospitals_page.dart';
 import 'package:hope/screens/pages/others_page.dart';
 import 'package:hope/screens/pages/pharmacy_page.dart';
 

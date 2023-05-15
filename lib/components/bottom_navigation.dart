@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:hope/screens/pages/clinics_page.dart';
-import 'package:hope/screens/pages/hospital_page.dart';
+import 'package:hope/screens/pages/hospitals_page.dart';
 import 'package:hope/screens/pages/others_page.dart';
 import 'package:hope/screens/pages/pharmacy_page.dart';
 
