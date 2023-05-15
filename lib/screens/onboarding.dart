@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'package:hope/screens/pages/homepage.dart';
+import 'package:hope/screens/pages/hospital_page.dart';
 
 class UserOnboardingPage extends ConsumerWidget {
   const UserOnboardingPage({super.key});
@@ -55,7 +55,7 @@ class UserOnboardingPage extends ConsumerWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return const UserHomePage();
+                            return const HospitalsPage();
                           },
                         ),
                       );
