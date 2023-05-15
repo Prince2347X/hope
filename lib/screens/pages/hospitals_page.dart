@@ -32,27 +32,27 @@ class HospitalsPage extends ConsumerWidget {
             ),
           )
         ],
-        title: Column(
+        title: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-              children: const [
+              children: [
                 Text('Boys Hostel'),
                 Icon(Icons.arrow_drop_down),
               ],
             ),
-            const Text('Mujgahan, Raipur')
+            Text('Mujgahan, Raipur')
           ],
         ),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SearchBar(
+            CustomSearchBar(
               callback: (value) {},
             ),
-            Row(
-              children: const <Widget>[
+            const Row(
+              children: <Widget>[
                 Expanded(
                   child: Divider(
                     endIndent: 12,
