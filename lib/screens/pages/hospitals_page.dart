@@ -48,7 +48,7 @@ class HospitalsPage extends ConsumerWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SearchBar(
+            CustomSearchBar(
               callback: (value) {},
             ),
             Row(

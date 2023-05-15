@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 
 import 'package:hope/constants.dart' as constants;
 
-class SearchBar extends StatefulWidget {
+class CustomSearchBar extends StatefulWidget {
   final Function(String) callback;
-  const SearchBar({super.key, required this.callback});
+  const CustomSearchBar({super.key, required this.callback});
 
   @override
-  State<SearchBar> createState() => _SearchBarState();
+  State<CustomSearchBar> createState() => _CustomSearchBarState();
 }
 
-class _SearchBarState extends State<SearchBar> {
+class _CustomSearchBarState extends State<CustomSearchBar> {
   bool isActive = false;
 
   @override
