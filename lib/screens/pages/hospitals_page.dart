@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:hope/components/action_button_text.dart';
 
 import 'package:hope/components/search_bar.dart';
+import 'package:hope/screens/pages/hospital_details.dart';
 
 class HospitalsPage extends ConsumerWidget {
   const HospitalsPage({super.key});
@@ -99,90 +101,69 @@ class HospitalsPage extends ConsumerWidget {
 }
 
 Widget hospitalCard(BuildContext context, String image, String name, String address, String dist) {
-  return Padding(
-    padding: const EdgeInsets.all(8.0),
-    child: Card(
-      clipBehavior: Clip.hardEdge,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(
-            width: double.infinity,
-            height: MediaQuery.of(context).size.height / 4,
-            child: Image.asset(
-              image,
-              fit: BoxFit.cover,
-              // alignment: const Alignment(0, -0.3),
+  return InkWell(
+    onTap: () {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const HospitalDetailsPage()));
+    },
+    child: Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Card(
+        clipBehavior: Clip.hardEdge,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(
+              width: double.infinity,
+              height: MediaQuery.of(context).size.height / 4,
+              child: Image.asset(
+                image,
+                fit: BoxFit.cover,
+                // alignment: const Alignment(0, -0.3),
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Expanded(
-                  flex: 12,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        name,
-                        style: const TextStyle(
-                          fontSize: 24,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Expanded(
+                    flex: 12,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          name,
+                          style: const TextStyle(
+                            fontSize: 24,
+                          ),
                         ),
-                      ),
-                      Text(address),
-                    ],
+                        Text(address),
+                      ],
+                    ),
                   ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      FloatingActionButton(
-                        mini: true,
-                        onPressed: () {},
-                        child: const Icon(
-                          Icons.navigation,
-                          color: Colors.white,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 8),
-                        child: Text(dist),
-                      ),
-                    ],
+                  Expanded(
+                    flex: 2,
+                    child: ActionButtonWithTitle(
+                      icon: Icons.navigation,
+                      title: dist,
+                    ),
                   ),
-                ),
-                const SizedBox(
-                  width: 12,
-                ),
-                Expanded(
-                  flex: 2,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      FloatingActionButton(
-                        mini: true,
-                        onPressed: () {},
-                        child: const Icon(
-                          Icons.call,
-                          color: Colors.white,
-                        ),
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.only(top: 8),
-                        child: Text('Call'),
-                      ),
-                    ],
+                  const SizedBox(
+                    width: 12,
                   ),
-                ),
-              ],
+                  const Expanded(
+                    flex: 2,
+                    child: ActionButtonWithTitle(
+                      icon: Icons.call,
+                      title: 'Call',
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     ),
   );
