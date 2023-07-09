@@ -60,7 +60,6 @@ class _CustomSearchBarState extends State<CustomSearchBar> {
                 color: isActive ? constants.primaryColor : Colors.black,
               ),
               border: InputBorder.none,
-              contentPadding: const EdgeInsets.all(20),
             ),
           ),
         ),
