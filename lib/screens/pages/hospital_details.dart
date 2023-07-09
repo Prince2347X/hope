@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hope/components/action_button_text.dart';
 
 import 'package:hope/components/divider.dart';
 import 'package:hope/constants.dart';
@@ -23,12 +24,12 @@ class _HospitalDetailsPageState extends State<HospitalDetailsPage> {
             fit: BoxFit.fitWidth,
             alignment: Alignment.center,
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                const Expanded(
+                Expanded(
                   flex: 8,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,34 +53,16 @@ class _HospitalDetailsPageState extends State<HospitalDetailsPage> {
                 ),
                 Expanded(
                   flex: 2,
-                  child: Column(
-                    children: [
-                      FloatingActionButton(
-                        onPressed: () {},
-                        mini: true,
-                        child: Transform.rotate(
-                          angle: 45 * 3.1415926535 / 180,
-                          child: const Icon(
-                            Icons.navigation_rounded,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                      const Text('13.8 km'),
-                    ],
+                  child: ActionButtonWithTitle(
+                    icon: Icons.navigation,
+                    title: '17.5 km',
                   ),
                 ),
                 Expanded(
                   flex: 2,
-                  child: Column(
-                    children: [
-                      FloatingActionButton(
-                        onPressed: () {},
-                        mini: true,
-                        child: const Icon(Icons.call, color: Colors.white),
-                      ),
-                      const Text('Call'),
-                    ],
+                  child: ActionButtonWithTitle(
+                    icon: Icons.phone,
+                    title: 'Call',
                   ),
                 ),
               ],
