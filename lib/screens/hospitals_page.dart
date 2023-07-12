@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:hope/components/action_button_text.dart';
 
 import 'package:hope/components/search_bar.dart';
-import 'package:hope/screens/pages/hospital_details.dart';
+import 'package:hope/screens/hospital_details.dart';
 
-class HospitalsPage extends ConsumerWidget {
+class HospitalsPage extends StatelessWidget {
   const HospitalsPage({super.key});
 
   static const name = 'Hospitals';
   static const path = '/hospitals';
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,

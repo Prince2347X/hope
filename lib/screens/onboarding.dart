@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:hope/screens/hospitals_page.dart';
 
-import 'package:hope/screens/pages/hospitals_page.dart';
-
-class UserOnboardingPage extends ConsumerWidget {
+class UserOnboardingPage extends StatelessWidget {
   const UserOnboardingPage({super.key});
 
   static const name = 'Onboarding';
   static const path = '/onboarding';
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         body: Stack(
@@ -51,14 +49,11 @@ class UserOnboardingPage extends ConsumerWidget {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return const HospitalsPage();
-                          },
-                        ),
-                      );
+                      Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HospitalsPage()),
+                          (route) => false);
                     },
                     child: const Padding(
                       padding:

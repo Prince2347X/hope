@@ -1,25 +1,17 @@
 import 'package:flutter/material.dart';
-
-import 'package:hooks_riverpod/hooks_riverpod.dart';
-
-import 'package:hope/router/config.dart';
-import 'package:hope/utils/utils.dart';
+import 'package:hope/screens/onboarding.dart';
 
 void main() {
   runApp(
-    const ProviderScope(
-      observers: [StateLogger()],
-      child: HopeApp(),
-    ),
+    const HopeApp(),
   );
 }
 
-class HopeApp extends ConsumerWidget {
+class HopeApp extends StatelessWidget {
   const HopeApp({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final router = ref.watch(routerProvider);
+  Widget build(BuildContext context) {
     const MaterialColor myCustomColor = MaterialColor(
       0xFF0CB683,
       <int, Color>{
@@ -35,8 +27,8 @@ class HopeApp extends ConsumerWidget {
         900: Color(0xFF067E54),
       },
     );
-    return MaterialApp.router(
-      routerConfig: router,
+    return MaterialApp(
+      home: const UserOnboardingPage(),
       theme: ThemeData(
         scaffoldBackgroundColor: const Color(0xFFE0F0E4),
         primaryColor: const Color(0xFF0CB683),

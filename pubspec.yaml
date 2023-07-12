@@ -17,13 +17,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # Routing
-  go_router: ^6.5.2
-
-  # State Management
-  hooks_riverpod: ^2.3.2
-  riverpod_annotation: ^2.0.2
-
 dev_dependencies:
   flutter_lints: ^2.0.0
   flutter_test:
